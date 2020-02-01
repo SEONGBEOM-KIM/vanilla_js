@@ -34,6 +34,8 @@ const calculator = {
   }
 };
 
+// calculator 라는 object를 만들어서 실행.
+
 const plus = calculator.plus(3, 9);
 console.log(plus);
 const minus = calculator.minus(9, 3);

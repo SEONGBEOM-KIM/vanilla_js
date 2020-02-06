@@ -41,8 +41,8 @@ function paintToDo(text) {
     text: text,
     id: newId
   };
-  toDos.push(toDoObj);
-  saveToDos();
+  toDos.push(toDoObj); // <--- 만든 object를 array에 넣음. 넣는 것은 여기.
+  saveToDos(); // <--- localStorage에 저장만 함.
 }
 
 // ul, li, button, span을 이용해서 리스트를 화면에 띄우고 localStorage에 저장함.
@@ -58,7 +58,7 @@ function handleSubmit(event) {
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
-    const parsedToDos = JSON.parse(loadedToDos); //string ---> objetc
+    const parsedToDos = JSON.parse(loadedToDos); //string ---> objetc 각 element를 분리,분석
     parsedToDos.forEach(function(toDo) {
       paintToDo(toDo.text); //localStorage에 값이 있을 때(!== null) 항상 화면에 띄우기
     });

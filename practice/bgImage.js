@@ -15,7 +15,6 @@ function genRandom() {
 
 function init() {
   const randomNumber = genRandom();
-  console.log(randomNumber);
   loadBgImg(randomNumber);
 }
 init();

@@ -1,6 +1,15 @@
-form {
+.user {
   display: none;
 }
+
 .showing {
   display: block;
+}
+
+.backgroundImg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }

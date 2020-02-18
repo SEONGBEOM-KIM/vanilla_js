@@ -5,10 +5,11 @@ const userForm = document.querySelector(".js-userForm"),
 const USER_NAME = "userName";
 
 function paintUser(name) {
-  userSpan.innerText = `Hello ${name}`;
+  userSpan.innerText = `Hello, ${name}.`;
 }
 
-function handleSubmit() {
+function handleSubmit(event) {
+  event.preventDefault();
   const userName = userInput.value;
   localStorage.setItem(USER_NAME, userName);
   paintUser(userName);
